@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:theme="@style/Theme.MaterialComponents"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity"
+    android:padding="30dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editIDNumber"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/LogTypeDisplay"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="0dp"
+        android:drawableStart="@drawable/ic_user_id"
+        android:drawablePadding="10dp"
+        android:ems="15"
+        android:hint="@string/ID_number"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textColorHint="@color/white"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxStrokeWidth="3dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTxtIDNumber"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:drawableStart="@drawable/ic_user"
+            android:drawablePadding="10dp"
+            android:ems="15"
+            android:inputType="number"
+            android:padding="10dp"
+            tools:ignore="TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editIDNumber"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="0dp"
+        android:hint="@string/password"
+        android:textColorHint="@color/white"
+        app:passwordToggleEnabled="true"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxStrokeWidth="3dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTxtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:drawableStart="@drawable/ic_password"
+            android:drawablePadding="10dp"
+            android:ems="15"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            tools:ignore="TextContrastCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="333dp"
+        android:layout_height="62dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="118dp"
+        android:layout_marginEnd="0dp"
+        android:contentDescription="@android:string/untitled"
+        app:srcCompat="@drawable/logo" />
+
+    <Button
+        android:id="@+id/LogButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/editLogType"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/background_button"
+        android:text="@string/Login"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editLogType"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editPassword"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="0dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxStrokeWidth="3dp"
+        app:endIconDrawable="@drawable/ic_arrow_down"
+        app:endIconMode="dropdown_menu"
+        android:hint="@string/logType"
+        android:textColorHint="@color/white">
+
+        <AutoCompleteTextView
+            android:id="@+id/editTxtLogType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_log_type"
+            android:drawablePadding="10dp"
+            android:ems="15"
+            android:freezesText="false"
+            android:inputType="none"
+            android:labelFor="@id/editTxtLogType"
+            android:padding="10dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/LogTypeDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="0dp"
+        android:text="@string/logType"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+
+</RelativeLayout>

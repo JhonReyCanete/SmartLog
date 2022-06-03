@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SmartLog</string>
+    <string name="Login">LOGIN</string>
+    <string name="ID_number">ID NUMBER</string>
+    <string name="password">PASSWORD</string>
+    <string name="submit">SUBMIT</string>
+    <string name="logType">SELECT LOG TYPE</string>
+    <string name="preSelectLog">Morning In</string>
+
+</resources>
